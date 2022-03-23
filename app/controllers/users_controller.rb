@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  def show
+    :authenticate_user
+    render json: current_user()
+  end
+
   def create
     user = User.new(
       name: params[:name],
