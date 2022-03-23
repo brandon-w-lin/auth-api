@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: params[:id])
     user.name = params[:name] || user.name
     user.email = params[:email] || user.email
+    # Can the user password be updated using this method?
     # user.password = params[:password] || user.password
     # user.password_confirmation = params[:password_confirmation] || user.password_confirmation
     user.admin = params[:admin] || user.admin
